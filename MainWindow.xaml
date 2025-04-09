@@ -1,0 +1,317 @@
+﻿<Window x:Class="WpfApp14.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp14"
+        mc:Ignorable="d"
+       
+    
+        Title="Решение задач по программированию" Height="700" Width="850">
+    <Grid>
+        <TabControl Margin="-1,0,1,-1050" RenderTransformOrigin="0.5,0.5">
+            <TabControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.058"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.371"/>
+                </TransformGroup>
+            </TabControl.RenderTransform>
+            <TabItem Header="Перевод чисел">
+                <ScrollViewer>
+                    <StackPanel Margin="10">
+
+                        <GroupBox Header="1. Двоичное в десятичное целое">
+                            <StackPanel Margin="5">
+                                <TextBox x:Name="task1Input" Width="200" Margin="0,0,0,5"/>
+                                <Button Content="Перевести" Click="Task1Button_Click" Width="100"/>
+                                <TextBlock x:Name="task1Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="2. Двоичное в восьмеричное целое">
+                            <StackPanel Margin="5">
+                                <TextBox x:Name="task2Input" Width="200" Margin="0,0,0,5"/>
+                                <Button Content="Перевести" Click="Task2Button_Click" Width="100"/>
+                                <TextBlock x:Name="task2Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="3. Двоичное в шестнадцатеричное целое">
+                            <StackPanel Margin="5">
+                                <TextBox x:Name="task3Input" Width="200" Margin="0,0,0,5"/>
+                                <Button Content="Перевести" Click="Task3Button_Click" Width="100"/>
+                                <TextBlock x:Name="task3Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="4. Двоичное в десятичное дробное">
+                            <StackPanel Margin="5">
+                                <TextBox x:Name="task4Input" Width="200" Margin="0,0,0,5"/>
+                                <Button Content="Перевести" Click="Task4Button_Click" Width="100"/>
+                                <TextBlock x:Name="task4Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="5. Двоичное в восьмеричное дробное">
+                            <StackPanel Margin="5">
+                                <TextBox x:Name="task5Input" Width="200" Margin="0,0,0,5"/>
+                                <Button Content="Перевести" Click="Task5Button_Click" Width="100"/>
+                                <TextBlock x:Name="task5Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="6. Двоичное в шестнадцатеричное дробное">
+                            <StackPanel Margin="5">
+                                <TextBox x:Name="task6Input" Width="200" Margin="0,0,0,5"/>
+                                <Button Content="Перевести" Click="Task6Button_Click" Width="100"/>
+                                <TextBlock x:Name="task6Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <TabItem Header="Работа с массивами (1)">
+                <ScrollViewer>
+                    <StackPanel Margin="10">
+
+                        <GroupBox Header="7. Изменить разрядность цифр">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите 15 двузначных чисел через пробел:"/>
+                                <TextBox x:Name="task7Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Преобразовать" Click="Task7Button_Click" Width="120"/>
+                                <TextBlock x:Name="task7Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="8. Восьмеричные в десятичные">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите 9 двузначных восьмеричных чисел через пробел:"/>
+                                <TextBox x:Name="task8Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Перевести" Click="Task8Button_Click" Width="120"/>
+                                <TextBlock x:Name="task8Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="9. Старшие разряды">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите 7 двузначных чисел через пробел:"/>
+                                <TextBox x:Name="task9Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Получить старшие разряды" Click="Task9Button_Click" Width="180"/>
+                                <TextBlock x:Name="task9Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="10. Объединение и сортировка">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Первый массив (7 чисел через пробел):"/>
+                                <TextBox x:Name="task10Input1" Width="300" Margin="0,0,0,5"/>
+                                <TextBlock Text="Второй массив (9 чисел через пробел):"/>
+                                <TextBox x:Name="task10Input2" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Объединить и отсортировать" Click="Task10Button_Click" Width="180"/>
+                                <TextBlock x:Name="task10Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="11. Удаление дубликатов">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите 12 двоичных чисел через пробел:"/>
+                                <TextBox x:Name="task11Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Удалить дубликаты" Click="Task11Button_Click" Width="150"/>
+                                <TextBlock x:Name="task11Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="12. Поиск одинаковых элементов">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите массив (должно быть 2 одинаковых элемента):"/>
+                                <TextBox x:Name="task12Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Найти одинаковые" Click="Task12Button_Click" Width="150"/>
+                                <TextBlock x:Name="task12Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="13. Циклический сдвиг влево на 2">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите двоичное число:"/>
+                                <TextBox x:Name="task13Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Выполнить сдвиг" Click="Task13Button_Click" Width="150"/>
+                                <TextBlock x:Name="task13Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="Задача 14: Сортировка по убыванию и сумма">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите двоичные числа через пробел:"/>
+                                <TextBox x:Name="task14Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Сортировать и суммировать" Click="Task14Button_Click" Width="180"/>
+                                <TextBlock x:Name="task14Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="15. Сортировка по возрастанию и среднее">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите двоичные числа через пробел:"/>
+                                <TextBox x:Name="task15Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Сортировать и найти среднее" Click="Task15Button_Click" Width="180"/>
+                                <TextBlock x:Name="task15Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="16. Поменять max и min местами">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите двоичные числа через пробел:"/>
+                                <TextBox x:Name="task16Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Поменять max и min" Click="Task16Button_Click" Width="150"/>
+                                <TextBlock x:Name="task16Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <TabItem Header="Работа с массивами (2)">
+                <ScrollViewer>
+                    <StackPanel Margin="10" Height="1709">
+                       
+                        <GroupBox Header="17. Циклический сдвиг вправо и сумма">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите двоичное число:"/>
+                                <TextBox x:Name="task17Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Выполнить сдвиг и сложить" Click="Task17Button_Click" Width="180"/>
+                                <TextBlock x:Name="task17Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="18. Разность сумм монотонных участков">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите целые числа через пробел:"/>
+                                <TextBox x:Name="task18Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Вычислить разность" Click="Task18Button_Click" Width="150"/>
+                                <TextBlock x:Name="task18Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="19. Проверка на арифметическую прогрессию">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите целые числа через пробел:"/>
+                                <TextBox x:Name="task19Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Проверить" Click="Task19Button_Click" Width="100"/>
+                                <TextBlock x:Name="task19Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="20. Проверка на геометрическую прогрессию">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите целые числа через пробел:"/>
+                                <TextBox x:Name="task20Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Проверить" Click="Task20Button_Click" Width="100"/>
+                                <TextBlock x:Name="task20Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="21. Элементы больше правых">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите целые числа через пробел:"/>
+                                <TextBox x:Name="task21Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Найти элементы" Click="Task21Button_Click" Width="150"/>
+                                <TextBlock x:Name="task21Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="22. Последний элемент, удовлетворяющий условию">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите целые числа через пробел:"/>
+                                <TextBox x:Name="task22Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Найти элемент" Click="Task22Button_Click" Width="150"/>
+                                <TextBlock x:Name="task22Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="23. Количество между max и min">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите двоичные числа через пробел:"/>
+                                <TextBox x:Name="task23Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Вычислить" Click="Task23Button_Click" Width="100"/>
+                                <TextBlock x:Name="task23Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="24. Циклический сдвиг вправо">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите двоичные числа через пробел:"/>
+                                <TextBox x:Name="task24Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Выполнить сдвиг" Click="Task24Button_Click" Width="150"/>
+                                <TextBlock x:Name="task24Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="25. Циклический сдвиг влево и сумма">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите двоичные числа через пробел:"/>
+                                <TextBox x:Name="task25Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Выполнить сдвиг и сложить" Click="Task25Button_Click" Width="180"/>
+                                <TextBlock x:Name="task25Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="26. Увеличение на 1010">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите двоичные числа через пробел:"/>
+                                <TextBox x:Name="task26Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Увеличить" Click="Task26Button_Click" Width="100"/>
+                                <TextBlock x:Name="task26Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="27. Наиболее близкий элемент">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите вещественные числа через пробел:"/>
+                                <TextBox x:Name="task27Input1" Width="300" Margin="0,0,0,5"/>
+                                <TextBlock Text="Введите число R:"/>
+                                <TextBox x:Name="task27Input2" Width="100" Margin="0,0,0,5"/>
+                                <Button Content="Найти ближайший" Click="Task27Button_Click" Width="150"/>
+                                <TextBlock x:Name="task27Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="28. Наиболее удаленный элемент">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите двоичные числа через пробел:"/>
+                                <TextBox x:Name="task28Input1" Width="300" Margin="0,0,0,5"/>
+                                <TextBlock Text="Введите двоичное число D:"/>
+                                <TextBox x:Name="task28Input2" Width="100" Margin="0,0,0,5"/>
+                                <Button Content="Найти удаленный" Click="Task28Button_Click" Width="150"/>
+                                <TextBlock x:Name="task28Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="29. Сумма положительного и отрицательного">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите положительное двоичное число:"/>
+                                <TextBox x:Name="task29Input1" Width="300" Margin="0,0,0,5"/>
+                                <TextBlock Text="Введите отрицательное двоичное число (с минусом):"/>
+                                <TextBox x:Name="task29Input2" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Вычислить сумму" Click="Task29Button_Click" Width="150"/>
+                                <TextBlock x:Name="task29Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="30. Перевод в двоичную систему">
+                            <StackPanel Margin="5">
+                                <TextBlock Text="Введите 3 десятичных числа через пробел:"/>
+                                <TextBox x:Name="task30Input" Width="300" Margin="0,0,0,5"/>
+                                <Button Content="Перевести в двоичную" Click="Task30Button_Click" Width="150"/>
+                                <TextBlock x:Name="task30Result" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+    </Grid>
+
+
+</Window>
